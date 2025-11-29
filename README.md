@@ -10,6 +10,26 @@ This project implements a robust Retrieval-Augmented Generation (RAG) agent usin
   - **Unstructured (Vector DB):** Uses ChromaDB with `sentence-transformers` for semantic search within medical protocols.
 - **MCP Server:** A centralized integration server (`mcp_server.py`) that standardizes tools for any AI client (Claude Desktop, Cursor, IDEs).
 
+---
+
+## 📸 Autonomous Agent Demo
+
+### 1. Backend Verification (MCP Inspector)
+*The server exposes structured SQL tools and Vector RAG tools via standard JSON-RPC.*
+![MCP Inspector](assets/1_mcp_inspector.png)
+
+### 2. Structured Reasoning (SQL Tool)
+*User asks for "Diabetes trials". The Agent autonomously selects the SQL tool to filter by disease.*
+![SQL Tool Use](assets/2_sql_query_start.png)
+![SQL Results](assets/3_sql_results.png)
+
+### 3. Semantic Reasoning (RAG Tool)
+*User asks for specific "kidney function exclusion criteria". The Agent switches tools to perform vector search on the protocol text.*
+![RAG Tool Use](assets/4_rag_query_start.png)
+![RAG Results](assets/5_rag_results.png)
+
+---
+
 ## 🛠️ Installation
 
 1. **Clone the repository:**
